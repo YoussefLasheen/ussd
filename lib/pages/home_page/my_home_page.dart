@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../flavors.dart';
+import 'package:ussd/flavors.dart';
 
 class MyHomePage extends StatelessWidget {
   @override
