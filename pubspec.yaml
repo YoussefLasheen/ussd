@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_phone_direct_caller: ^2.1.1
+  google_fonts: ^4.0.3
   shared_preferences: ^2.1.0
 
 dev_dependencies:

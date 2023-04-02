@@ -63,6 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
               'المفضلة',
               style: Theme.of(context).textTheme.titleLarge,
             ),
+          const SizedBox(height: 10),
           ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -79,6 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
             'كل الكودات',
             style: Theme.of(context).textTheme.titleLarge,
           ),
+          const SizedBox(height: 10),
           ListView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),

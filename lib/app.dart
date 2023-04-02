@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'flavors.dart';
 import 'pages/home_page/my_home_page.dart';
@@ -13,6 +14,9 @@ class App extends StatelessWidget {
       theme: ThemeData.light(useMaterial3: true).copyWith(
         colorScheme: ColorScheme.light(
           primary: F.color,
+        ),
+        textTheme: GoogleFonts.cairoTextTheme(
+          Theme.of(context).textTheme,
         ),
       ),
       home: const Directionality(
