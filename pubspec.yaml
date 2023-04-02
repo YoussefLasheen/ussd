@@ -14,6 +14,25 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  flutter_flavorizr: ^2.1.6
 
 flutter:
   uses-material-design: true
+
+flavorizr:
+  ide: vscode
+  flavors:
+    vodafone:
+      app:
+        name: "Vodafone Cash"
+      android:
+        applicationId: "dev.lasheen.ussd.vodafone"
+      ios:
+        bundleId: "com.example.apple"
+    orange:
+      app:
+        name: "Orange Cash"
+      android:
+        applicationId: "dev.lasheen.ussd.orange"
+      ios:
+        bundleId: "com.example.apple"
