@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ussd/constants.dart';
+import 'package:ussd/models/code.dart';
 
 enum Flavor {
   vodafone,
@@ -30,6 +32,18 @@ class F {
         return 'Orange Cash';
       default:
         return 'title';
+    }
+  }
+
+  //Add codes getter
+  static List<Code> get code {
+    switch (appFlavor) {
+      case Flavor.vodafone:
+        return vodafoneCodes;
+      case Flavor.orange:
+        return orangeCodes;
+      default:
+        return [];
     }
   }
 }
