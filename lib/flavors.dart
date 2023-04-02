@@ -27,9 +27,9 @@ class F {
   static String get title {
     switch (appFlavor) {
       case Flavor.vodafone:
-        return 'Vodafone Cash';
+        return 'فودافون';
       case Flavor.orange:
-        return 'Orange Cash';
+        return 'أورانج';
       default:
         return 'title';
     }
