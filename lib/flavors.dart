@@ -5,6 +5,8 @@ import 'package:ussd/models/code.dart';
 enum Flavor {
   vodafone,
   orange,
+  we,
+  etisalat,
 }
 
 class F {
@@ -14,36 +16,17 @@ class F {
 
   //Add color getter
   static Color get color {
-    switch (appFlavor) {
-      case Flavor.vodafone:
-        return Colors.red;
-      case Flavor.orange:
-        return Colors.orange;
-      default:
-        return Colors.black;
-    }
+    return Color(identity[name]['color']);
   }
 
   static String get title {
-    switch (appFlavor) {
-      case Flavor.vodafone:
-        return 'فودافون';
-      case Flavor.orange:
-        return 'أورانج';
-      default:
-        return 'title';
-    }
+    return identity[name]['name']; 
   }
 
   //Add codes getter
   static List<CodeSection> get code {
-    switch (appFlavor) {
-      case Flavor.vodafone:
-        return vodafoneCodes;
-      case Flavor.orange:
-        return orangeCodes;
-      default:
-        return [];
-    }
+    return identity[name]['codes']
+        .map<CodeSection>((e) => CodeSection.fromJson(e))
+        .toList();
   }
 }
