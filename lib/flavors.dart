@@ -36,7 +36,7 @@ class F {
   }
 
   //Add codes getter
-  static List<Code> get code {
+  static List<CodeSection> get code {
     switch (appFlavor) {
       case Flavor.vodafone:
         return vodafoneCodes;

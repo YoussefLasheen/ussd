@@ -23,10 +23,11 @@ class _MyHomePageState extends State<MyHomePage> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     setState(
       () {
-        likedItems = (prefs.getStringList('likedItems') ?? [])
-            .map((e) => F.code.firstWhere(
-                  (element) => element.code == e,
-                ))
+        likedItems = F.code
+            .expand((element) => element.codes)
+            .where((element) =>
+                prefs.getStringList('likedItems')?.contains(element.code) ??
+                false)
             .toList();
       },
     );
@@ -54,47 +55,68 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: Text(F.title),
+        backgroundColor: F.color,
+        foregroundColor: Colors.white,
       ),
-      body: Center(
-          child: ListView(
-        children: [
-          if (likedItems.isNotEmpty)
-            Text(
-              'المفضلة',
-              style: Theme.of(context).textTheme.titleLarge,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: ListView(
+          children: [
+            if (likedItems.isNotEmpty) const SizedBox(height: 10),
+            if (likedItems.isNotEmpty)
+              Text(
+                'المفضلة',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+            const SizedBox(height: 10),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: likedItems.length,
+              separatorBuilder: (context, index) => const SizedBox(height: 10),
+              itemBuilder: (context, index) {
+                return CodeCard(
+                  code: likedItems[index],
+                  isLiked: likedItems.contains(likedItems[index]),
+                  onLike: () => toggleLike(likedItems[index]),
+                );
+              },
             ),
-          const SizedBox(height: 10),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: likedItems.length,
-            itemBuilder: (context, index) {
-              return CodeCard(
-                code: likedItems[index],
-                isLiked: likedItems.contains(likedItems[index]),
-                onLike: () => toggleLike(likedItems[index]),
-              );
-            },
-          ),
-          Text(
-            'كل الكودات',
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(height: 10),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: F.code.length,
-            itemBuilder: (context, index) {
-              return CodeCard(
-                code: F.code[index],
-                isLiked: likedItems.contains(F.code[index]),
-                onLike: () => toggleLike(F.code[index]),
-              );
-            },
-          )
-        ],
-      )),
+            const SizedBox(height: 10),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: F.code.length,
+              separatorBuilder: (context, index) => const SizedBox(height: 10),
+              itemBuilder: (context, sectionIndex) {
+                return ListView.separated(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: F.code[sectionIndex].codes.length - 1,
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(height: 10),
+                  itemBuilder: (context, codeIndex) {
+                    if (codeIndex == 0) {
+                      return Text(
+                        F.code[sectionIndex].name,
+                        style: Theme.of(context).textTheme.titleLarge,
+                      );
+                    }
+                    return CodeCard(
+                      code: F.code[sectionIndex].codes[codeIndex],
+                      isLiked: likedItems
+                          .contains(F.code[sectionIndex].codes[codeIndex]),
+                      onLike: () =>
+                          toggleLike(F.code[sectionIndex].codes[codeIndex]),
+                    );
+                  },
+                );
+              },
+            ),
+            SizedBox(height: 25),
+          ],
+        ),
+      ),
     );
   }
 }
