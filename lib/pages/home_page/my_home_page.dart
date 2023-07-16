@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:ussd/flavors.dart';
 import 'package:ussd/models/code.dart';
 import 'package:ussd/pages/home_page/widgets/code_card.dart';
@@ -57,6 +58,42 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(F.title),
         backgroundColor: F.color,
         foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.help_outline),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: AlertDialog(
+                      title: const Text('عن التطبيق'),
+                      content: const Text(
+                        'تطبيق يساعدك على الوصول لأكواد الشبكات المصرية بسهولة وبدون الحاجة للبحث عنها في الإنترنت.\n اذا واجهتك أي مشكلة برجاء الضغط على تواصل معنا',
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () => launchUrl(Uri(
+                              scheme: 'mailto',
+                              path: 'ussd@lasheen.dev',
+                              queryParameters: {
+                                'subject': '${F.name} تطبيق:'
+                              })),
+                          child: const Text('تواصل معنا'),
+                        ),
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('حسناً'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              );
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
