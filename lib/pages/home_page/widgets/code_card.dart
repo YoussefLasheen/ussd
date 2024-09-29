@@ -42,6 +42,7 @@ class CodeCard extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(Colors.white),
               ),
               onPressed: () {
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text('تم نسخ الكود'),
