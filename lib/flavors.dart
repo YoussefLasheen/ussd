@@ -1,32 +1,33 @@
-import 'package:flutter/material.dart';
-import 'package:ussd/constants.dart';
-import 'package:ussd/models/code.dart';
+import 'package:flutter/services.dart';
+import 'package:ussd/models/identity.dart';
 
 enum Flavor {
   vodafone,
   orange,
   we,
-  etisalat,
+  etisalat;
+
+  Identity get identity => switch (this) {
+        Flavor.vodafone => const Identity(
+            name: 'فودافون',
+            color: Color(0xffdf0000),
+          ),
+        Flavor.orange => const Identity(
+            name: 'أورانج',
+            color: Color(0xffffa500),
+          ),
+        Flavor.we => const Identity(
+            name: 'WE',
+            color: Color(0xff603395),
+          ),
+        Flavor.etisalat => const Identity(
+            name: 'اتصالات',
+            color: Color(0xffb22222),
+          ),
+      };
 }
 
 class F {
-  static Flavor? appFlavor;
-
-  static String get name => appFlavor?.name ?? '';
-
-  //Add color getter
-  static Color get color {
-    return Color(identity[name]['color']);
-  }
-
-  static String get title {
-    return identity[name]['name']; 
-  }
-
-  //Add codes getter
-  static List<CodeSection> get code {
-    return identity[name]['codes']
-        .map<CodeSection>((e) => CodeSection.fromJson(e))
-        .toList();
-  }
+  static Flavor flavor = Flavor.values.byName(appFlavor!);
+  static Identity get identity => flavor.identity;
 }

@@ -10,10 +10,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: F.title,
+      title: F.identity.name,
       theme: ThemeData.light(useMaterial3: true).copyWith(
         colorScheme: ColorScheme.light(
-          primary: F.color,
+          primary: F.identity.color,
         ),
         textTheme: GoogleFonts.cairoTextTheme(
           Theme.of(context).textTheme,
