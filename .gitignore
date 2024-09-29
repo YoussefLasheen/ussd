@@ -43,8 +43,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-
 # Flavourizer temp
 .tmp
 assets.tmp.zip
 ios
+
+# FVM Version Cache
+.fvm/
