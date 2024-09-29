@@ -11,6 +11,7 @@ class CodeCard extends StatelessWidget {
     Future<void> call(String number) async {
       bool? res = await FlutterPhoneDirectCaller.callNumber(number);
       if (res == null || !res) {
+        ScaffoldMessenger.of(context).hideCurrentSnackBar();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text("لم يتم الاتصال بالرقم"),
@@ -42,6 +43,7 @@ class CodeCard extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(Colors.white),
               ),
               onPressed: () {
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Text('تم نسخ الكود'),
