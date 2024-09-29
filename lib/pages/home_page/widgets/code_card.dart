@@ -4,13 +4,9 @@ import 'package:ussd/models/code.dart';
 
 class CodeCard extends StatelessWidget {
   final Code code;
-  final bool isLiked;
-  final VoidCallback onLike;
   const CodeCard(
       {super.key,
-      required this.code,
-      required this.isLiked,
-      required this.onLike});
+      required this.code});
 
   @override
   Widget build(BuildContext context) {
@@ -52,13 +48,6 @@ class CodeCard extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(Colors.white),
               ),
               onPressed: () => call(code.code),
-            ),
-            IconButton(
-              icon: Icon(isLiked ? Icons.star : Icons.star_border_outlined),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.white),
-              ),
-              onPressed: () => onLike(),
             ),
           ],
         ),
