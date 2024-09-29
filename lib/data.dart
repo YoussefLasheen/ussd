@@ -2,15 +2,24 @@ import 'dart:convert';
 
 import 'package:ussd/flavors.dart';
 import 'package:ussd/models/code.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
 Future<AppResponse> fetchData() async {
+  final prefs = await SharedPreferencesWithCache.create(
+    cacheOptions: const SharedPreferencesWithCacheOptions(),
+  );
+  if (prefs.containsKey("data")) {
+    return AppResponse.fromJson(jsonDecode(prefs.getString("data")!));
+  }
+
   final response = await http.get(Uri.parse(
       'https://raw.githubusercontent.com/YoussefLasheen/ussd/master/data.json'));
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
     // then parse the JSON.
+    prefs.setString("data", response.body);
     return AppResponse.fromJson(
         jsonDecode(response.body) as Map<String, dynamic>);
   } else {
