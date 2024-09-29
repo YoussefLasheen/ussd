@@ -4,21 +4,21 @@ publish_to: 'none'
 version: 0.1.0
 
 environment:
-  sdk: '>=2.19.2 <3.0.0'
+  sdk: '>=3.5.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_phone_direct_caller: ^2.1.1
-  google_fonts: ^4.0.3
-  shared_preferences: ^2.1.0
-  url_launcher: ^6.1.12
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
-  flutter_flavorizr: ^2.2.1 
+  flutter_lints: ^5.0.0
+  flutter_flavorizr: ^2.2.3 
 
 flutter:
   uses-material-design: true
