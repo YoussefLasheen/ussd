@@ -74,7 +74,15 @@ class _MyHomePageState extends State<MyHomePage> {
             }
 
             if (snapshot.hasError) {
-              return Text('${snapshot.error}');
+              return Center(
+                child: Text(
+                  'يرجي التأكد من الاتصال بالإنترنت لأول مره فقط',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
+              );
             }
 
             final codeSections = snapshot.data!.codeSections;
@@ -99,9 +107,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             const SizedBox(height: 10),
                         itemBuilder: (context, codeIndex) {
                           if (codeIndex == 0) {
-                            return Text(
-                              codeSections[sectionIndex].name,
-                              style: Theme.of(context).textTheme.titleLarge,
+                            return Padding(
+                              padding: const EdgeInsets.only(top: 25),
+                              child: Text(
+                                codeSections[sectionIndex].name,
+                                style: TextStyle(
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             );
                           }
                           return CodeCard(
