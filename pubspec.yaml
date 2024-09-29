@@ -29,27 +29,27 @@ flavorizr:
     vodafone:
       app:
         name: "Vodafone Codes"
-        icon: "/var/mnt/fastD/design/Apps/ussd/vodafone.png"
+        icon: "app_icons/vodafone.png"
       android:
         applicationId: "dev.lasheen.ussd.vodafone"
 
     orange:
       app:
         name: "Orange Codes"
-        icon: "/var/mnt/fastD/design/Apps/ussd/orange.png"
+        icon: "app_icons/orange.png"
       android:
         applicationId: "dev.lasheen.ussd.orange"
 
     we:
       app:
         name: "We Codes"
-        icon: "/var/mnt/fastD/design/Apps/ussd/we.png"
+        icon: "app_icons/we.png"
       android:
         applicationId: "dev.lasheen.ussd.we"
 
     etisalat:
       app:
         name: "Etisalat Codes"
-        icon: "/var/mnt/fastD/design/Apps/ussd/etisalat.png"  
+        icon: "app_icons/etisalat.png"
       android:
         applicationId: "dev.lasheen.ussd.etisalat"
