@@ -4,9 +4,7 @@ import 'package:ussd/models/code.dart';
 
 class CodeCard extends StatelessWidget {
   final Code code;
-  const CodeCard(
-      {super.key,
-      required this.code});
+  const CodeCard({super.key, required this.code});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +22,17 @@ class CodeCard extends StatelessWidget {
     return Card(
       clipBehavior: Clip.hardEdge,
       child: ListTile(
-        title: Text(code.name),
-        subtitle: Text(code.code),
+        title: Text(
+          code.code,
+          textDirection: TextDirection.ltr,
+          textAlign: TextAlign.end,
+        ),
+        titleTextStyle: const TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+          color: Colors.black,
+        ),
+        subtitle: Text(code.name),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
