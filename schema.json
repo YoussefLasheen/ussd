@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "USSD Codes",
+  "description": "Collection of USSD codes for different mobile carriers",
+  "type": "object",
+  "required": ["codes"],
+  "properties": {
+    "codes": {
+      "type": "array",
+      "description": "List of carriers with their USSD codes",
+      "items": {
+        "type": "object",
+        "required": ["id", "data"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Identifier for the mobile carrier (e.g., vodafone, orange, we, etisalat)"
+          },
+          "data": {
+            "type": "array",
+            "description": "Sections of USSD codes for the carrier",
+            "items": {
+              "type": "object",
+              "required": ["sectionName", "codes"],
+              "properties": {
+                "sectionName": {
+                  "type": "string",
+                  "description": "Name of the section grouping related codes"
+                },
+                "codes": {
+                  "type": "array",
+                  "description": "List of USSD codes in this section",
+                  "items": {
+                    "type": "object",
+                    "required": ["name", "code"],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Description of what the USSD code is for"
+                      },
+                      "code": {
+                        "type": "string",
+                        "description": "The actual USSD code to dial"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
