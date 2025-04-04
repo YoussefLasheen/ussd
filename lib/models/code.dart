@@ -1,14 +1,24 @@
 class Code {
+  final String id;
   final String name;
   final String code;
 
-  Code({required this.name, required this.code});
+  Code({required this.id, required this.name, required this.code});
 
   factory Code.fromJson(Map<String, dynamic> json) {
     return Code(
+      id: json['id'] ?? '',
       name: json['name'],
       code: json['code'],
     );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'code': code,
+    };
   }
 }
 

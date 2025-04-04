@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:ussd/custom_code_repository.dart';
 import 'package:ussd/data.dart';
 import 'package:ussd/flavors.dart';
+import 'package:ussd/models/code.dart';
+import 'package:ussd/pages/home_page/widgets/add_code_dialog.dart';
 import 'package:ussd/pages/home_page/widgets/banners.dart';
 import 'package:ussd/pages/home_page/widgets/code_card.dart';
 
@@ -14,10 +17,57 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late Future<AppResponse> future;
+  late Future<List<Code>> customCodes;
+
   @override
   void initState() {
     super.initState();
+    _initializeData();
+  }
+
+  Future<void> _initializeData() async {
+    // Get custom codes
+    customCodes = CustomCodeRepository().getCustomCodeSection();
+
+    // Get API codes
     future = fetchData();
+  }
+
+  void _showAddCodeDialog() {
+    showDialog(
+      context: context,
+      builder: (context) => AddCodeDialog(
+        onAddCode: _addCustomCode,
+      ),
+    );
+  }
+
+  Future<void> _addCustomCode(Code code) async {
+    final val = await CustomCodeRepository().addCustomCode(code);
+    setState(() {
+      customCodes = Future.value(val);
+    });
+
+    // Show confirmation to user
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('تم إضافة الكود بنجاح')),
+      );
+    }
+  }
+
+  Future<void> _deleteCustomCode(String id) async {
+    final val = await CustomCodeRepository().deleteCustomCode(id);
+    setState(() {
+      customCodes = Future.value(val);
+    });
+
+    // Show confirmation to user
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('تم حذف الكود بنجاح')),
+      );
+    }
   }
 
   @override
@@ -65,8 +115,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: FutureBuilder<AppResponse>(
-        future: future,
+      floatingActionButton: FloatingActionButton(
+        onPressed: _showAddCodeDialog,
+        backgroundColor: F.identity.color,
+        foregroundColor: Colors.white,
+        child: const Icon(Icons.add),
+      ),
+      body: FutureBuilder(
+        future: Future.wait([future, customCodes]),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
@@ -85,17 +141,49 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             );
           }
+          final appResponse = snapshot.data?.elementAt(0) as AppResponse;
+          final customCodes = snapshot.data?.elementAt(1) as List<Code>;
 
           final children = <Widget>[
             const SizedBox(
               height: 25,
             ),
             Banners(
-              banners: snapshot.data!.banners,
+              banners: appResponse.banners,
             ),
           ];
 
-          final codeSections = snapshot.data!.codeSections;
+          // Add custom codes section if available
+          if (customCodes.isNotEmpty) {
+            children.add(
+              Padding(
+                padding: const EdgeInsets.only(top: 25),
+                child: Text(
+                  'اكوادي المخصصة',
+                  style: const TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            );
+
+            for (final code in customCodes) {
+              children.add(CodeCard(
+                code: code,
+                isCustomCode: true,
+                onDeleteCustomCode: _deleteCustomCode,
+              ));
+              children.add(
+                const SizedBox(
+                  height: 10,
+                ),
+              );
+            }
+          }
+
+          // Add API code sections
+          final codeSections = appResponse!.codeSections;
           for (final codeSection in codeSections) {
             children.add(
               Padding(
@@ -119,7 +207,9 @@ class _MyHomePageState extends State<MyHomePage> {
               );
             }
           }
-
+          children.add(SizedBox(
+            height: 80 + MediaQuery.paddingOf(context).bottom,
+          ));
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: ListView(children: children),
