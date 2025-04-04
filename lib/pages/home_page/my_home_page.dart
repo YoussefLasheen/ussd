@@ -65,71 +65,59 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: FutureBuilder<AppResponse>(
-          future: future,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            }
+        future: future,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
 
-            if (snapshot.hasError) {
-              return Center(
+          if (snapshot.hasError) {
+            return Center(
+              child: Text(
+                'يرجي التأكد من الاتصال بالإنترنت لأول مره فقط',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            );
+          }
+
+          final children = <Widget>[];
+
+          final codeSections = snapshot.data!.codeSections;
+          for (final codeSection in codeSections) {
+            children.add(
+              Padding(
+                padding: const EdgeInsets.only(top: 25),
                 child: Text(
-                  'يرجي التأكد من الاتصال بالإنترنت لأول مره فقط',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 18,
+                  codeSection.name,
+                  style: const TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,
                   ),
+                ),
+              ),
+            );
+
+            for (final code in codeSection.codes) {
+              children.add(CodeCard(code: code));
+              children.add(
+                const SizedBox(
+                  height: 10,
                 ),
               );
             }
+          }
 
-            final codeSections = snapshot.data!.codeSections;
-
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: ListView(
-                children: [
-                  const SizedBox(height: 10),
-                  ListView.separated(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: codeSections.length,
-                    separatorBuilder: (context, index) =>
-                        const SizedBox(height: 10),
-                    itemBuilder: (context, sectionIndex) {
-                      return ListView.separated(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: codeSections[sectionIndex].codes.length - 1,
-                        separatorBuilder: (context, index) =>
-                            const SizedBox(height: 10),
-                        itemBuilder: (context, codeIndex) {
-                          if (codeIndex == 0) {
-                            return Padding(
-                              padding: const EdgeInsets.only(top: 25),
-                              child: Text(
-                                codeSections[sectionIndex].name,
-                                style: TextStyle(
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            );
-                          }
-                          return CodeCard(
-                            code: codeSections[sectionIndex].codes[codeIndex],
-                          );
-                        },
-                      );
-                    },
-                  ),
-                  const SizedBox(height: 25),
-                ],
-              ),
-            );
-          }),
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: ListView(children: children),
+          );
+        },
+      ),
     );
   }
 }
