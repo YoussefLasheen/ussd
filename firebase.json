@@ -1,0 +1,45 @@
+{
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "ussd-firebase-project",
+                    "appId": "1:593506968710:android:9552dea0fe805c2d771d07",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "ussd-firebase-project",
+                    "configurations": {
+                        "android": "1:593506968710:android:b2bbff03e39d6a07771d07"
+                    }
+                },
+                "lib/firebase_options/etisalat.dart": {
+                    "projectId": "ussd-firebase-project",
+                    "configurations": {
+                        "android": "1:593506968710:android:b2bbff03e39d6a07771d07"
+                    }
+                },
+                "lib/firebase_options/orange.dart": {
+                    "projectId": "ussd-firebase-project",
+                    "configurations": {
+                        "android": "1:593506968710:android:33a95ee3f7903029771d07"
+                    }
+                },
+                "lib/firebase_options/vodafone.dart": {
+                    "projectId": "ussd-firebase-project",
+                    "configurations": {
+                        "android": "1:593506968710:android:52ad0097fbe1ba4b771d07"
+                    }
+                },
+                "lib/firebase_options/we.dart": {
+                    "projectId": "ussd-firebase-project",
+                    "configurations": {
+                        "android": "1:593506968710:android:9552dea0fe805c2d771d07"
+                    }
+                }
+            }
+        }
+    }
+}

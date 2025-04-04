@@ -1,4 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
+import 'package:ussd/firebase_options/etisalat.dart' as etisalat_firebase;
+import 'package:ussd/firebase_options/vodafone.dart' as vodafone_firebase;
+import 'package:ussd/firebase_options/we.dart' as we_firebase;
+import 'package:ussd/firebase_options/orange.dart' as orange_firebase;
 import 'package:ussd/models/identity.dart';
 
 enum Flavor {
@@ -24,6 +29,12 @@ enum Flavor {
             name: 'اتصالات',
             color: Color(0xffb22222),
           ),
+      };
+  FirebaseOptions get firebaseOptions => switch (this) {
+        etisalat => etisalat_firebase.DefaultFirebaseOptions.currentPlatform,
+        vodafone => vodafone_firebase.DefaultFirebaseOptions.currentPlatform,
+        we => we_firebase.DefaultFirebaseOptions.currentPlatform,
+        orange => orange_firebase.DefaultFirebaseOptions.currentPlatform,
       };
 }
 
