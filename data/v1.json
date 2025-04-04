@@ -1,5 +1,40 @@
 {
    "$schema": "./schema_v1.json",
+   "banners": [
+      {
+         "title": "ستيكرات واتساب",
+         "description": "ستيكرات واتساب مصريه",
+         "url": "https://play.google.com/store/apps/details?id=dev.lasheen.stickers.egyptian",
+         "tags": [
+            "flavor_etisalat",
+            "flavor_we",
+            "flavor_vodafone",
+            "platform_android"
+         ]
+      },
+      {
+         "title": "أكواد أورانج",
+         "description": "كل أكواد اورانج في مكان واحد",
+         "url": "https://play.google.com/store/apps/details?id=dev.lasheen.ussd.orange",
+         "tags": [
+            "flavor_etisalat",
+            "flavor_we",
+            "flavor_vodafone",
+            "platform_android"
+         ]
+      },
+      {
+         "title": "أكواد اتصالات",
+         "description": "كل أكواد اتصالات في مكان واحد",
+         "url": "https://play.google.com/store/apps/details?id=dev.lasheen.ussd.etisalat",
+         "tags": [
+            "flavor_orange",
+            "flavor_we",
+            "flavor_vodafone",
+            "platform_android"
+         ]
+      }
+   ],
    "codes": [
       {
          "id": "vodafone",

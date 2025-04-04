@@ -3,8 +3,37 @@
   "title": "USSD Codes",
   "description": "Collection of USSD codes for different mobile carriers",
   "type": "object",
-  "required": ["codes"],
+  "required": ["codes", "banners"],
   "properties": {
+    "banners": {
+      "type": "array",
+      "description": "Promotional banners for different apps",
+      "items": {
+        "type": "object",
+        "required": ["title", "description", "url", "tags"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Title of the banner"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description text for the banner"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to link to when the banner is clicked"
+          },
+          "tags": {
+            "type": "array",
+            "description": "Tags to determine when this banner should be shown",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
     "codes": {
       "type": "array",
       "description": "List of carriers with their USSD codes",
