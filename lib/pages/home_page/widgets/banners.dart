@@ -14,47 +14,48 @@ class Banners extends StatefulWidget {
 }
 
 class _BannersState extends State<Banners> {
-  late final PageController controller;
+  bool reverse = false;
+  late Timer timer;
+  final PageController controller = PageController();
   @override
   void initState() {
     super.initState();
-    controller = PageController();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Timer.periodic(
-        const Duration(seconds: 5),
-        (timer) async {
-          if (!mounted) {
-            timer.cancel();
-            return;
-          }
-          if (controller.page == widget.banners.length - 1) {
-            await controller.animateToPage(
-              0,
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeIn,
-            );
-          } else {
-            await controller.nextPage(
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.easeIn,
-            );
-          }
-          final page = controller.page?.round();
-          if (page == null) return;
-          final banner = widget.banners[page];
-          FirebaseAnalytics.instance.logEvent(
-            name: 'banner_impression',
-            parameters: {
-              'banner_id': banner.id,
-            },
+    timer = Timer.periodic(
+      const Duration(seconds: 5),
+      (timer) async {
+        if (controller.page == widget.banners.length - 1) {
+          reverse = true;
+        } else if (controller.page == 0) {
+          reverse = false;
+        }
+
+        if (reverse) {
+          await controller.previousPage(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeIn,
           );
-        },
-      );
-    });
+        } else {
+          await controller.nextPage(
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.easeIn,
+          );
+        }
+        final page = controller.page?.round();
+        if (page == null) return;
+        final banner = widget.banners[page];
+        FirebaseAnalytics.instance.logEvent(
+          name: 'banner_impression',
+          parameters: {
+            'banner_id': banner.id,
+          },
+        );
+      },
+    );
   }
 
   @override
   void dispose() {
+    timer.cancel();
     controller.dispose();
     super.dispose();
   }
