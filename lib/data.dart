@@ -11,7 +11,7 @@ Future<AppResponse> fetchData() async {
   );
   try {
     final response = await http.get(Uri.parse(
-        'https://raw.githubusercontent.com/YoussefLasheen/ussd/master/data.json'));
+        'https://raw.githubusercontent.com/YoussefLasheen/ussd/master/data/v1.json'));
 
     if (response.statusCode == 200) {
       // If the server did return a 200 OK response,
