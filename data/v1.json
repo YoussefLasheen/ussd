@@ -2,6 +2,7 @@
    "$schema": "./schema_v1.json",
    "banners": [
       {
+         "id": "stickers",
          "title": "ستيكرات واتساب",
          "description": "ستيكرات واتساب مصريه",
          "url": "https://play.google.com/store/apps/details?id=dev.lasheen.stickers.egyptian",
@@ -13,6 +14,7 @@
          ]
       },
       {
+         "id": "orange_ussd",
          "title": "أكواد أورانج",
          "description": "كل أكواد اورانج في مكان واحد",
          "url": "https://play.google.com/store/apps/details?id=dev.lasheen.ussd.orange",
@@ -24,6 +26,7 @@
          ]
       },
       {
+         "id": "vodafone_ussd",
          "title": "أكواد اتصالات",
          "description": "كل أكواد اتصالات في مكان واحد",
          "url": "https://play.google.com/store/apps/details?id=dev.lasheen.ussd.etisalat",

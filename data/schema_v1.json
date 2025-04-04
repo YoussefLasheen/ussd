@@ -10,7 +10,7 @@
       "description": "Promotional banners for different apps",
       "items": {
         "type": "object",
-        "required": ["title", "description", "url", "tags"],
+        "required": ["id","title", "description", "url", "tags"],
         "properties": {
           "title": {
             "type": "string",
