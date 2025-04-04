@@ -132,12 +132,28 @@ class _MyHomePageState extends State<MyHomePage> {
 
           if (snapshot.hasError) {
             return Center(
-              child: Text(
-                'يرجي التأكد من الاتصال بالإنترنت لأول مره فقط',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 18,
-                ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'يرجي التأكد من الاتصال بالإنترنت لأول مره فقط',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        _initializeData();
+                      });
+                    },
+                    child: const Text('إعادة المحاولة'),
+                  ),
+                ],
               ),
             );
           }
