@@ -1,4 +1,6 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
+import 'package:ussd/flavors.dart';
 import 'package:ussd/models/code.dart';
 
 class AddCodeDialog extends StatefulWidget {
@@ -73,6 +75,13 @@ class _AddCodeDialogState extends State<AddCodeDialog> {
           ),
           TextButton(
             onPressed: () {
+              FirebaseAnalytics.instance.logEvent(
+                name: 'add_custom_code',
+                parameters: {
+                  'code': _codeController.text,
+                  'name': _nameController.text,
+                },
+              );
               if (_formKey.currentState!.validate()) {
                 final newCode = Code(
                   id: DateTime.now().millisecondsSinceEpoch.toString(),

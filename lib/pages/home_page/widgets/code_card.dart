@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
@@ -81,6 +82,13 @@ class CodeCard extends StatelessWidget {
             IconButton(
               icon: const Icon(Icons.copy),
               onPressed: () {
+                FirebaseAnalytics.instance.logEvent(
+                  name: 'copy_code',
+                  parameters: {
+                    'code': code.code,
+                    'name': code.name,
+                  },
+                );
                 Clipboard.setData(ClipboardData(text: code.code));
                 ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 ScaffoldMessenger.of(context).showSnackBar(
@@ -92,7 +100,16 @@ class CodeCard extends StatelessWidget {
             ),
             IconButton(
               icon: const Icon(Icons.phone),
-              onPressed: () => call(code.code),
+              onPressed: () {
+                FirebaseAnalytics.instance.logEvent(
+                  name: 'call_code',
+                  parameters: {
+                    'code': code.code,
+                    'name': code.name,
+                  },
+                );
+                call(code.code);
+              },
             ),
           ],
         ),
