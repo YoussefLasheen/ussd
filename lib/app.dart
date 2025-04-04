@@ -11,9 +11,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: F.identity.name,
-      theme: ThemeData.light(useMaterial3: true).copyWith(
-        colorScheme: ColorScheme.light(
-          primary: F.identity.color,
+      theme: ThemeData(useMaterial3: true).copyWith(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: F.identity.color,
         ),
         textTheme: GoogleFonts.cairoTextTheme(
           Theme.of(context).textTheme,

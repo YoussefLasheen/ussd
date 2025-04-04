@@ -61,6 +61,17 @@ class _BannersState extends State<Banners> {
 
   @override
   Widget build(BuildContext context) {
+    void onTapBanner(BannerModel banner) async {
+      if (banner.link == null) return;
+      FirebaseAnalytics.instance.logEvent(
+        name: 'banner_click',
+        parameters: {
+          'banner_id': banner.id,
+        },
+      );
+      launchUrl(Uri.parse(banner.link!));
+    }
+
     return Column(
       children: [
         Align(
@@ -80,17 +91,7 @@ class _BannersState extends State<Banners> {
             children: widget.banners.map((banner) {
               return Card(
                 child: GestureDetector(
-                  onTap: banner.link == null
-                      ? null
-                      : () {
-                          FirebaseAnalytics.instance.logEvent(
-                            name: 'banner_click',
-                            parameters: {
-                              'banner_id': banner.id,
-                            },
-                          );
-                          launchUrl(Uri.parse(banner.link!));
-                        },
+                  onTap: banner.link == null ? null : () => onTapBanner(banner),
                   child: ListTile(
                     title: Text(
                       banner.title,
@@ -104,15 +105,12 @@ class _BannersState extends State<Banners> {
                             style: const TextStyle(fontSize: 14),
                           )
                         : null,
-                    trailing: banner.link != null
-                        ? const TextButton(
-                            onPressed: null,
-                            child: Text(
-                              'تفاصيل',
-                              style: TextStyle(color: Colors.blue),
-                            ),
-                          )
-                        : null,
+                    trailing: banner.link == null
+                        ? null
+                        : TextButton(
+                            onPressed: () => onTapBanner(banner),
+                            child: Text('تفاصيل'),
+                          ),
                   ),
                 ),
               );
