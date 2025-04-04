@@ -61,53 +61,65 @@ class _BannersState extends State<Banners> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 80,
-      child: PageView(
-        allowImplicitScrolling: false,
-        physics: const NeverScrollableScrollPhysics(),
-        controller: controller,
-        children: widget.banners.map((banner) {
-          return Card(
-            child: GestureDetector(
-              onTap: banner.link == null
-                  ? null
-                  : () {
-                      FirebaseAnalytics.instance.logEvent(
-                        name: 'banner_click',
-                        parameters: {
-                          'banner_id': banner.id,
+    return Column(
+      children: [
+        Align(
+          alignment: AlignmentDirectional.centerStart,
+          child: Text(
+            'اعلانات',
+            style: Theme.of(context).textTheme.labelSmall,
+          ),
+        ),
+        const SizedBox(height: 2),
+        SizedBox(
+          height: 80,
+          child: PageView(
+            allowImplicitScrolling: false,
+            physics: const NeverScrollableScrollPhysics(),
+            controller: controller,
+            children: widget.banners.map((banner) {
+              return Card(
+                child: GestureDetector(
+                  onTap: banner.link == null
+                      ? null
+                      : () {
+                          FirebaseAnalytics.instance.logEvent(
+                            name: 'banner_click',
+                            parameters: {
+                              'banner_id': banner.id,
+                            },
+                          );
+                          launchUrl(Uri.parse(banner.link!));
                         },
-                      );
-                      launchUrl(Uri.parse(banner.link!));
-                    },
-              child: ListTile(
-                title: Text(
-                  banner.title,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
+                  child: ListTile(
+                    title: Text(
+                      banner.title,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: banner.description != null
+                        ? Text(
+                            banner.description!,
+                            style: const TextStyle(fontSize: 14),
+                          )
+                        : null,
+                    trailing: banner.link != null
+                        ? const TextButton(
+                            onPressed: null,
+                            child: Text(
+                              'تفاصيل',
+                              style: TextStyle(color: Colors.blue),
+                            ),
+                          )
+                        : null,
                   ),
                 ),
-                subtitle: banner.description != null
-                    ? Text(
-                        banner.description!,
-                        style: const TextStyle(fontSize: 14),
-                      )
-                    : null,
-                trailing: banner.link != null
-                    ? const TextButton(
-                        onPressed: null,
-                        child: Text(
-                          'تفاصيل',
-                          style: TextStyle(color: Colors.blue),
-                        ),
-                      )
-                    : null,
-              ),
-            ),
-          );
-        }).toList(),
-      ),
+              );
+            }).toList(),
+          ),
+        ),
+      ],
     );
   }
 }
