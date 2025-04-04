@@ -10,7 +10,7 @@ Future<void> main() async {
     options: F.flavor.firebaseOptions,
   );
   FirebaseMessaging.instance.requestPermission();
-  await FirebaseMessaging.instance.subscribeToTopic("flavor${F.flavor.name}");
+  await FirebaseMessaging.instance.subscribeToTopic("flavor_${F.flavor.name}");
   runApp(const App());
 }
 // flutterfire config --android-package-name=dev.lasheen.ussd.etisalat --project=ussd-firebase-project --out=lib/firebase_options/etisalat.dart
