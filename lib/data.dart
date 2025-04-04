@@ -9,23 +9,27 @@ Future<AppResponse> fetchData() async {
   final prefs = await SharedPreferencesWithCache.create(
     cacheOptions: const SharedPreferencesWithCacheOptions(),
   );
-  if (prefs.containsKey("data")) {
-    return AppResponse.fromJson(jsonDecode(prefs.getString("data")!));
-  }
+  try {
+    final response = await http.get(Uri.parse(
+        'https://raw.githubusercontent.com/YoussefLasheen/ussd/master/data.json'));
 
-  final response = await http.get(Uri.parse(
-      'https://raw.githubusercontent.com/YoussefLasheen/ussd/master/data.json'));
-
-  if (response.statusCode == 200) {
-    // If the server did return a 200 OK response,
-    // then parse the JSON.
-    prefs.setString("data", response.body);
-    return AppResponse.fromJson(
-        jsonDecode(response.body) as Map<String, dynamic>);
-  } else {
-    // If the server did not return a 200 OK response,
-    // then throw an exception.
-    throw Exception('Failed to load album');
+    if (response.statusCode == 200) {
+      // If the server did return a 200 OK response,
+      // then parse the JSON.
+      prefs.setString("data", response.body);
+      return AppResponse.fromJson(
+          jsonDecode(response.body) as Map<String, dynamic>);
+    } else {
+      // If the server did not return a 200 OK response,
+      // then throw an exception.
+      throw Exception('Failed to load album');
+    }
+  } catch (e) {
+    if (prefs.containsKey("data")) {
+      return AppResponse.fromJson(jsonDecode(prefs.getString("data")!));
+    } else {
+      rethrow;
+    }
   }
 }
 
