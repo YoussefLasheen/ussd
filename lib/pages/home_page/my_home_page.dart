@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:ussd/data.dart';
 import 'package:ussd/flavors.dart';
+import 'package:ussd/pages/home_page/widgets/banners.dart';
 import 'package:ussd/pages/home_page/widgets/code_card.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -85,7 +86,14 @@ class _MyHomePageState extends State<MyHomePage> {
             );
           }
 
-          final children = <Widget>[];
+          final children = <Widget>[
+            const SizedBox(
+              height: 25,
+            ),
+            Banners(
+              banners: snapshot.data!.banners,
+            ),
+          ];
 
           final codeSections = snapshot.data!.codeSections;
           for (final codeSection in codeSections) {

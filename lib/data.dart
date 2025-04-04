@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:ussd/flavors.dart';
+import 'package:ussd/models/banner.dart';
 import 'package:ussd/models/code.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
@@ -34,9 +36,10 @@ Future<AppResponse> fetchData() async {
 }
 
 class AppResponse {
+  final List<BannerModel> banners;
   final List<CodeSection> codeSections;
 
-  AppResponse({required this.codeSections});
+  AppResponse({required this.codeSections, required this.banners});
 
   factory AppResponse.fromJson(Map<String, dynamic> json) {
     String id = F.flavor.name;
@@ -45,12 +48,26 @@ class AppResponse {
 
     Map map = list.firstWhere((element) => element['id'] == id);
 
+    List<BannerModel> banners = [];
+
+    final requiredTags = [
+      "flavor_${F.flavor.name}",
+      "platform_${Platform.operatingSystem}",
+    ];
+    for (var banner in json['banners']) {
+      final bannerModel = BannerModel.fromJson(banner);
+      if (requiredTags.every((tag) => bannerModel.tags.contains(tag))) {
+        banners.add(bannerModel);
+      }
+    }
+
     return AppResponse(
       codeSections: List<CodeSection>.from(
         map['data'].map(
           (x) => CodeSection.fromJson(x as Map<String, dynamic>),
         ),
       ),
+      banners: banners,
     );
   }
 }
