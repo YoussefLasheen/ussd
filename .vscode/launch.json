@@ -1,1 +1,125 @@
-{"version":"0.2.0","configurations":[{"name":"vodafone Debug","request":"launch","type":"dart","flutterMode":"debug","args":["--flavor","vodafone"],"program":"lib/main_vodafone.dart"},{"name":"vodafone Profile","request":"launch","type":"dart","flutterMode":"profile","args":["--flavor","vodafone"],"program":"lib/main_vodafone.dart"},{"name":"vodafone Release","request":"launch","type":"dart","flutterMode":"release","args":["--flavor","vodafone"],"program":"lib/main_vodafone.dart"},{"name":"orange Debug","request":"launch","type":"dart","flutterMode":"debug","args":["--flavor","orange"],"program":"lib/main_orange.dart"},{"name":"orange Profile","request":"launch","type":"dart","flutterMode":"profile","args":["--flavor","orange"],"program":"lib/main_orange.dart"},{"name":"orange Release","request":"launch","type":"dart","flutterMode":"release","args":["--flavor","orange"],"program":"lib/main_orange.dart"},{"name":"we Debug","request":"launch","type":"dart","flutterMode":"debug","args":["--flavor","we"],"program":"lib/main_we.dart"},{"name":"we Profile","request":"launch","type":"dart","flutterMode":"profile","args":["--flavor","we"],"program":"lib/main_we.dart"},{"name":"we Release","request":"launch","type":"dart","flutterMode":"release","args":["--flavor","we"],"program":"lib/main_we.dart"},{"name":"etisalat Debug","request":"launch","type":"dart","flutterMode":"debug","args":["--flavor","etisalat"],"program":"lib/main_etisalat.dart"},{"name":"etisalat Profile","request":"launch","type":"dart","flutterMode":"profile","args":["--flavor","etisalat"],"program":"lib/main_etisalat.dart"},{"name":"etisalat Release","request":"launch","type":"dart","flutterMode":"release","args":["--flavor","etisalat"],"program":"lib/main_etisalat.dart"}]}
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "vodafone Debug",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "args": [
+                "--flavor",
+                "vodafone"
+            ],
+        },
+        {
+            "name": "vodafone Profile",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--flavor",
+                "vodafone"
+            ],
+        },
+        {
+            "name": "vodafone Release",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--flavor",
+                "vodafone"
+            ],
+        },
+        {
+            "name": "orange Debug",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "args": [
+                "--flavor",
+                "orange"
+            ],
+        },
+        {
+            "name": "orange Profile",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--flavor",
+                "orange"
+            ],
+        },
+        {
+            "name": "orange Release",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--flavor",
+                "orange"
+            ],
+        },
+        {
+            "name": "we Debug",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "args": [
+                "--flavor",
+                "we"
+            ],
+        },
+        {
+            "name": "we Profile",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--flavor",
+                "we"
+            ],
+        },
+        {
+            "name": "we Release",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--flavor",
+                "we"
+            ],
+        },
+        {
+            "name": "etisalat Debug",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug",
+            "args": [
+                "--flavor",
+                "etisalat"
+            ],
+        },
+        {
+            "name": "etisalat Profile",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--flavor",
+                "etisalat"
+            ],
+        },
+        {
+            "name": "etisalat Release",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--flavor",
+                "etisalat"
+            ],
+        }
+    ]
+}
