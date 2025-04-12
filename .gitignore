@@ -46,7 +46,7 @@ app.*.map.json
 # Flavourizer temp
 .tmp
 assets.tmp.zip
-ios
+# ios
 
 # FVM Version Cache
 .fvm/
