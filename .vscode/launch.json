@@ -10,6 +10,7 @@
                 "--flavor",
                 "vodafone"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "vodafone Profile",
@@ -20,6 +21,7 @@
                 "--flavor",
                 "vodafone"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "vodafone Release",
@@ -30,6 +32,7 @@
                 "--flavor",
                 "vodafone"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "orange Debug",
@@ -40,6 +43,7 @@
                 "--flavor",
                 "orange"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "orange Profile",
@@ -50,6 +54,7 @@
                 "--flavor",
                 "orange"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "orange Release",
@@ -60,6 +65,7 @@
                 "--flavor",
                 "orange"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "we Debug",
@@ -70,6 +76,7 @@
                 "--flavor",
                 "we"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "we Profile",
@@ -80,6 +87,7 @@
                 "--flavor",
                 "we"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "we Release",
@@ -90,6 +98,7 @@
                 "--flavor",
                 "we"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "etisalat Debug",
@@ -100,6 +109,7 @@
                 "--flavor",
                 "etisalat"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "etisalat Profile",
@@ -110,6 +120,7 @@
                 "--flavor",
                 "etisalat"
             ],
+            "program": "lib/main.dart"
         },
         {
             "name": "etisalat Release",
@@ -120,6 +131,7 @@
                 "--flavor",
                 "etisalat"
             ],
+            "program": "lib/main.dart"
         }
     ]
 }

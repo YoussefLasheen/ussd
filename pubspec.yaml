@@ -25,7 +25,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-  flutter_flavorizr: ^2.2.3 
+  flutter_flavorizr: ^2.3.0 
 
 flutter:
   uses-material-design: true
@@ -41,6 +41,8 @@ flavorizr:
         icon: "app_icons/vodafone.png"
       android:
         applicationId: "dev.lasheen.ussd.vodafone"
+      ios:
+        bundleId: "dev.lasheen.ussd.vodafone"
 
     orange:
       app:
@@ -48,6 +50,8 @@ flavorizr:
         icon: "app_icons/orange.png"
       android:
         applicationId: "dev.lasheen.ussd.orange"
+      ios:
+        bundleId: "dev.lasheen.ussd.orange"
 
     we:
       app:
@@ -55,6 +59,8 @@ flavorizr:
         icon: "app_icons/we.png"
       android:
         applicationId: "dev.lasheen.ussd.we"
+      ios:
+        bundleId: "dev.lasheen.ussd.we"
 
     etisalat:
       app:
@@ -62,3 +68,5 @@ flavorizr:
         icon: "app_icons/etisalat.png"
       android:
         applicationId: "dev.lasheen.ussd.etisalat"
+      ios:
+        bundleId: "dev.lasheen.ussd.etisalat"

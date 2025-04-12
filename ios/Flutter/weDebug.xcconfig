@@ -1,0 +1,6 @@
+#include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"
+#include "Generated.xcconfig"
+
+ASSET_PREFIX=we
+BUNDLE_NAME=We Codes
+BUNDLE_DISPLAY_NAME=We Codes
