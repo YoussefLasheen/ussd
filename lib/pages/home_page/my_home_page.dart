@@ -164,9 +164,10 @@ class _MyHomePageState extends State<MyHomePage> {
             const SizedBox(
               height: 25,
             ),
-            Banners(
-              banners: appResponse.banners,
-            ),
+            if (appResponse.banners.isNotEmpty)
+              Banners(
+                banners: appResponse.banners,
+              ),
           ];
 
           // Add custom codes section if available
