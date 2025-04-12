@@ -18,25 +18,47 @@
                 "lib/firebase_options/etisalat.dart": {
                     "projectId": "ussd-firebase-project",
                     "configurations": {
-                        "android": "1:593506968710:android:b2bbff03e39d6a07771d07"
+                        "android": "1:593506968710:android:b2bbff03e39d6a07771d07",
+                        "ios": "1:593506968710:ios:5f537e1e577db1bb771d07"
                     }
                 },
                 "lib/firebase_options/orange.dart": {
                     "projectId": "ussd-firebase-project",
                     "configurations": {
-                        "android": "1:593506968710:android:33a95ee3f7903029771d07"
+                        "android": "1:593506968710:android:33a95ee3f7903029771d07",
+                        "ios": "1:593506968710:ios:ef6247ee58844268771d07"
                     }
                 },
                 "lib/firebase_options/vodafone.dart": {
                     "projectId": "ussd-firebase-project",
                     "configurations": {
-                        "android": "1:593506968710:android:52ad0097fbe1ba4b771d07"
+                        "android": "1:593506968710:android:52ad0097fbe1ba4b771d07",
+                        "ios": "1:593506968710:ios:ecfba7cf22f73e70771d07"
                     }
                 },
                 "lib/firebase_options/we.dart": {
                     "projectId": "ussd-firebase-project",
                     "configurations": {
-                        "android": "1:593506968710:android:9552dea0fe805c2d771d07"
+                        "android": "1:593506968710:android:9552dea0fe805c2d771d07",
+                        "ios": "1:593506968710:ios:371e4f2d97aed7de771d07"
+                    }
+                }
+            },
+            "ios": {
+                "buildConfigurations": {
+                    "Release-etisalat": {
+                        "projectId": "ussd-firebase-project",
+                        "appId": "1:593506968710:ios:5f537e1e577db1bb771d07",
+                        "uploadDebugSymbols": false,
+                        "fileOutput": "ios/flavors/etisalat/GoogleService-Info.plist"
+                    }
+                },
+                "targets": {
+                    "Runner": {
+                        "projectId": "ussd-firebase-project",
+                        "appId": "1:593506968710:ios:371e4f2d97aed7de771d07",
+                        "uploadDebugSymbols": false,
+                        "fileOutput": "ios/flavors/we/GoogleService-Info.plist"
                     }
                 }
             }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02A7792E75FFFCDA424A619B /* vodafoneRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 162A6C59B6144110AD43502A /* vodafoneRelease.xcconfig */; };
+		06F9166C5F6ACA62604E743D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D14A8A8F763039CD70236F8 /* GoogleService-Info.plist */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		1C1B4AA59BBD78273E87FF8B /* etisalatRelease.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F53DFE7956A00B8787E8C7C4 /* etisalatRelease.xcconfig */; };
 		331C808B294A63AB00263BE5 /* RunnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C807B294A618700263BE5 /* RunnerTests.swift */; };
@@ -83,6 +84,7 @@
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
 		7F83F8D082FC20A9888D401F /* Pods-RunnerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8687560F710247E7DA71255E /* etisalatProfile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = etisalatProfile.xcconfig; path = Flutter/etisalatProfile.xcconfig; sourceTree = "<group>"; };
+		8D14A8A8F763039CD70236F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "flavors/etisalat/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		919B1B155FB0EAAF227BE709 /* etisalatDebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = etisalatDebug.xcconfig; path = Flutter/etisalatDebug.xcconfig; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				DA6249B2FEC963D944518110 /* etisalatLaunchScreen.storyboard */,
 				E1EE8B0DFBC0C66810ABD28F /* Pods */,
 				4F83D53C30E397C8483481B9 /* Frameworks */,
+				8D14A8A8F763039CD70236F8 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -272,6 +275,7 @@
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				6B5B16427996F80D2C139072 /* [CP] Embed Pods Frameworks */,
 				8BD292F2B1F17BB2BEF04291 /* [CP] Copy Pods Resources */,
+				CC70975F6CA58BC5163D5B93 /* FlutterFire: "flutterfire bundle-service-file" */,
 			);
 			buildRules = (
 			);
@@ -353,6 +357,7 @@
 				E1C766F3564F666A7F5F6269 /* orangeLaunchScreen.storyboard in Resources */,
 				3DCDC759DD351206EEC10207 /* weLaunchScreen.storyboard in Resources */,
 				C300049A97CA41E5E65DBD00 /* etisalatLaunchScreen.storyboard in Resources */,
+				06F9166C5F6ACA62604E743D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +450,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CC70975F6CA58BC5163D5B93 /* FlutterFire: "flutterfire bundle-service-file" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "FlutterFire: \"flutterfire bundle-service-file\"";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\n#!/bin/bash\nPATH=\"${PATH}:$FLUTTER_ROOT/bin:$HOME/.pub-cache/bin\"\nflutterfire bundle-service-file --plist-destination=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\" --build-configuration=${CONFIGURATION} --platform=ios --apple-project-path=\"${SRCROOT}\"\n";
 		};
 		DEB994E6671921C409DEA5CE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -13,7 +13,7 @@ Future<void> main() async {
   await FirebaseMessaging.instance.subscribeToTopic("flavor_${F.flavor.name}");
   runApp(const App());
 }
-// flutterfire config --android-package-name=dev.lasheen.ussd.etisalat --project=ussd-firebase-project --out=lib/firebase_options/etisalat.dart
-// flutterfire config --android-package-name=dev.lasheen.ussd.orange --project=ussd-firebase-project --out=lib/firebase_options/orange.dart
-// flutterfire config --android-package-name=dev.lasheen.ussd.vodafone --project=ussd-firebase-project --out=lib/firebase_options/vodafone.dart
-// flutterfire config --android-package-name=dev.lasheen.ussd.we --project=ussd-firebase-project --out=lib/firebase_options/we.dart
+// flutterfire config  --project=ussd-firebase-project  --out=lib/firebase_options/etisalat.dart --ios-bundle-id=dev.lasheen.ussd.etisalat --ios-out=ios/flavors/etisalat/GoogleService-Info.plist --android-package-name=dev.lasheen.ussd.etisalat
+// flutterfire config  --project=ussd-firebase-project  --out=lib/firebase_options/orange.dart --ios-bundle-id=dev.lasheen.ussd.orange --ios-out=ios/flavors/orange/GoogleService-Info.plist --android-package-name=dev.lasheen.ussd.orange
+// flutterfire config  --project=ussd-firebase-project  --out=lib/firebase_options/vodafone.dart --ios-bundle-id=dev.lasheen.ussd.vodafone --ios-out=ios/flavors/vodafone/GoogleService-Info.plist --android-package-name=dev.lasheen.ussd.vodafone
+// flutterfire config  --project=ussd-firebase-project  --out=lib/firebase_options/we.dart --ios-bundle-id=dev.lasheen.ussd.we --ios-out=ios/flavors/we/GoogleService-Info.plist --android-package-name=dev.lasheen.ussd.we
