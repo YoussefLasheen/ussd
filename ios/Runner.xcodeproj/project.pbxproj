@@ -64,21 +64,28 @@
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		162A6C59B6144110AD43502A /* vodafoneRelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = vodafoneRelease.xcconfig; path = Flutter/vodafoneRelease.xcconfig; sourceTree = "<group>"; };
+		16DD6B2B81868282968922BF /* Pods-RunnerTests.release-etisalat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release-etisalat.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release-etisalat.xcconfig"; sourceTree = "<group>"; };
 		18B4C5362715EAC6DF347E1C /* Pods-Runner.release-orange.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-orange.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-orange.xcconfig"; sourceTree = "<group>"; };
 		1A90D459F9C9FC4DA1BA075A /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
+		1B2B9907AE1D0CC2A5BCDE0D /* Pods-RunnerTests.profile-vodafone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile-vodafone.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile-vodafone.xcconfig"; sourceTree = "<group>"; };
 		1F663DB9845038F1C21B13FB /* orangeProfile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = orangeProfile.xcconfig; path = Flutter/orangeProfile.xcconfig; sourceTree = "<group>"; };
+		224C37458D21E66B95A92647 /* Pods-RunnerTests.release-vodafone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release-vodafone.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release-vodafone.xcconfig"; sourceTree = "<group>"; };
 		28D3972D02DA5805F680B3A4 /* weLaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = weLaunchScreen.storyboard; path = Runner/weLaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C189E3000690F8AD6DA34DD /* vodafoneProfile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = vodafoneProfile.xcconfig; path = Flutter/vodafoneProfile.xcconfig; sourceTree = "<group>"; };
 		2FC0179611D281E0C631C015 /* weProfile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = weProfile.xcconfig; path = Flutter/weProfile.xcconfig; sourceTree = "<group>"; };
 		331C807B294A618700263BE5 /* RunnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunnerTests.swift; sourceTree = "<group>"; };
 		331C8081294A63A400263BE5 /* RunnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A17D72269B582DAED86C19 /* Pods-RunnerTests.release-we.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release-we.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release-we.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		429D76C91C91150B04F9664B /* Pods-Runner.profile-we.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-we.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-we.xcconfig"; sourceTree = "<group>"; };
+		45C1B238A9FC0583433F55B9 /* Pods-RunnerTests.debug-we.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-we.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-we.xcconfig"; sourceTree = "<group>"; };
 		4B83537F144837F6D8C622B8 /* weRelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = weRelease.xcconfig; path = Flutter/weRelease.xcconfig; sourceTree = "<group>"; };
 		52EE317EFD5AEEE41FE38576 /* Pods_RunnerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RunnerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEA3020F010AE88D73AA401 /* Pods-Runner.debug-etisalat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-etisalat.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-etisalat.xcconfig"; sourceTree = "<group>"; };
 		5E0CC4EE6BCC6A429CF02CA2 /* weDebug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = weDebug.xcconfig; path = Flutter/weDebug.xcconfig; sourceTree = "<group>"; };
 		63670B15B258918529D82FA5 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		6510EF6085C0B36AE4D94B79 /* Pods-RunnerTests.profile-we.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile-we.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile-we.xcconfig"; sourceTree = "<group>"; };
+		7367FA2B97B05CDB3390243A /* Pods-RunnerTests.profile-orange.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile-orange.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile-orange.xcconfig"; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
@@ -96,13 +103,19 @@
 		A3DA3393BB94E7B8797B57CE /* Pods-Runner.release-we.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-we.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-we.xcconfig"; sourceTree = "<group>"; };
 		AEEB1D9D858C1ED5B42A4B0E /* Pods-Runner.profile-orange.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-orange.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-orange.xcconfig"; sourceTree = "<group>"; };
 		B0A0DBE9569E9C1EEA57465E /* orangeRelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = orangeRelease.xcconfig; path = Flutter/orangeRelease.xcconfig; sourceTree = "<group>"; };
+		B686B7302DAAD41A0045E853 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
 		BC2CA703EF79D46282934903 /* Pods-RunnerTests.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig"; sourceTree = "<group>"; };
 		C305A9ED2AB7700CB2C25090 /* Pods-Runner.debug-orange.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-orange.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-orange.xcconfig"; sourceTree = "<group>"; };
 		D2C2872798C20FF96DC1D668 /* Pods-Runner.debug-vodafone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-vodafone.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-vodafone.xcconfig"; sourceTree = "<group>"; };
 		D33F7A43DDDF03A7D6553F5F /* Pods-Runner.debug-we.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug-we.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug-we.xcconfig"; sourceTree = "<group>"; };
 		DA6249B2FEC963D944518110 /* etisalatLaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = etisalatLaunchScreen.storyboard; path = Runner/etisalatLaunchScreen.storyboard; sourceTree = "<group>"; };
+		E38EB723172B029820FC2FB7 /* Pods-RunnerTests.debug-etisalat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-etisalat.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-etisalat.xcconfig"; sourceTree = "<group>"; };
 		E3E35AB80F37FD86AF3EFEE4 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
+		E4D075AE8971BC1EC0D2DC2C /* Pods-RunnerTests.debug-orange.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-orange.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-orange.xcconfig"; sourceTree = "<group>"; };
+		E69E522714676F5AB2ACD379 /* Pods-RunnerTests.release-orange.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release-orange.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release-orange.xcconfig"; sourceTree = "<group>"; };
 		E859D351C5AF314BEA6DE9C5 /* vodafoneLaunchScreen.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = vodafoneLaunchScreen.storyboard; path = Runner/vodafoneLaunchScreen.storyboard; sourceTree = "<group>"; };
+		E889C39E5698C136CA0A5E90 /* Pods-RunnerTests.profile-etisalat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.profile-etisalat.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile-etisalat.xcconfig"; sourceTree = "<group>"; };
+		EA1FE5856A9CFD61AFC576AD /* Pods-RunnerTests.debug-vodafone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.debug-vodafone.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug-vodafone.xcconfig"; sourceTree = "<group>"; };
 		EF088FADA21C166FD0C550C6 /* Pods-Runner.profile-etisalat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-etisalat.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-etisalat.xcconfig"; sourceTree = "<group>"; };
 		F045A3C0D175B77AB72B2FE8 /* Pods-Runner.profile-vodafone.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile-vodafone.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile-vodafone.xcconfig"; sourceTree = "<group>"; };
 		F0D0470246782A1E19387C57 /* Pods-RunnerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RunnerTests.release.xcconfig"; path = "Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +215,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				B686B7302DAAD41A0045E853 /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -235,8 +249,19 @@
 				7F83F8D082FC20A9888D401F /* Pods-RunnerTests.debug.xcconfig */,
 				F0D0470246782A1E19387C57 /* Pods-RunnerTests.release.xcconfig */,
 				BC2CA703EF79D46282934903 /* Pods-RunnerTests.profile.xcconfig */,
+				EA1FE5856A9CFD61AFC576AD /* Pods-RunnerTests.debug-vodafone.xcconfig */,
+				1B2B9907AE1D0CC2A5BCDE0D /* Pods-RunnerTests.profile-vodafone.xcconfig */,
+				224C37458D21E66B95A92647 /* Pods-RunnerTests.release-vodafone.xcconfig */,
+				E4D075AE8971BC1EC0D2DC2C /* Pods-RunnerTests.debug-orange.xcconfig */,
+				7367FA2B97B05CDB3390243A /* Pods-RunnerTests.profile-orange.xcconfig */,
+				E69E522714676F5AB2ACD379 /* Pods-RunnerTests.release-orange.xcconfig */,
+				45C1B238A9FC0583433F55B9 /* Pods-RunnerTests.debug-we.xcconfig */,
+				6510EF6085C0B36AE4D94B79 /* Pods-RunnerTests.profile-we.xcconfig */,
+				34A17D72269B582DAED86C19 /* Pods-RunnerTests.release-we.xcconfig */,
+				E38EB723172B029820FC2FB7 /* Pods-RunnerTests.debug-etisalat.xcconfig */,
+				E889C39E5698C136CA0A5E90 /* Pods-RunnerTests.profile-etisalat.xcconfig */,
+				16DD6B2B81868282968922BF /* Pods-RunnerTests.release-etisalat.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -620,6 +645,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FBDB3879B7EE8BA6699D0B55 /* vodafoneDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-vodafone";
@@ -628,6 +655,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2FC0179611D281E0C631C015 /* weProfile.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-we";
@@ -636,6 +665,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 919B1B155FB0EAAF227BE709 /* etisalatDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-etisalat";
@@ -644,6 +675,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E0CC4EE6BCC6A429CF02CA2 /* weDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-we";
@@ -706,8 +739,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = F38894J7TP;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -991,6 +1025,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B83537F144837F6D8C622B8 /* weRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-we";
@@ -1288,6 +1324,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C189E3000690F8AD6DA34DD /* vodafoneProfile.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-vodafone";
@@ -1551,8 +1589,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = F38894J7TP;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1574,8 +1613,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
-				DEVELOPMENT_TEAM = F38894J7TP;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1594,14 +1634,114 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F663DB9845038F1C21B13FB /* orangeProfile.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-orange";
+		};
+		B686B7242DAAD3F30045E853 /* Debug-vodafone */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1FE5856A9CFD61AFC576AD /* Pods-RunnerTests.debug-vodafone.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-vodafone";
+		};
+		B686B7252DAAD3F30045E853 /* Profile-vodafone */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B2B9907AE1D0CC2A5BCDE0D /* Pods-RunnerTests.profile-vodafone.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-vodafone";
+		};
+		B686B7262DAAD3F30045E853 /* Release-vodafone */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 224C37458D21E66B95A92647 /* Pods-RunnerTests.release-vodafone.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-vodafone";
+		};
+		B686B7272DAAD3F30045E853 /* Debug-orange */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D075AE8971BC1EC0D2DC2C /* Pods-RunnerTests.debug-orange.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-orange";
+		};
+		B686B7282DAAD3F30045E853 /* Profile-orange */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7367FA2B97B05CDB3390243A /* Pods-RunnerTests.profile-orange.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-orange";
+		};
+		B686B7292DAAD3F30045E853 /* Release-orange */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69E522714676F5AB2ACD379 /* Pods-RunnerTests.release-orange.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-orange";
+		};
+		B686B72A2DAAD3F30045E853 /* Debug-we */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45C1B238A9FC0583433F55B9 /* Pods-RunnerTests.debug-we.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-we";
+		};
+		B686B72B2DAAD3F30045E853 /* Profile-we */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6510EF6085C0B36AE4D94B79 /* Pods-RunnerTests.profile-we.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-we";
+		};
+		B686B72C2DAAD3F30045E853 /* Release-we */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34A17D72269B582DAED86C19 /* Pods-RunnerTests.release-we.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-we";
+		};
+		B686B72D2DAAD3F30045E853 /* Debug-etisalat */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E38EB723172B029820FC2FB7 /* Pods-RunnerTests.debug-etisalat.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Debug-etisalat";
+		};
+		B686B72E2DAAD3F30045E853 /* Profile-etisalat */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E889C39E5698C136CA0A5E90 /* Pods-RunnerTests.profile-etisalat.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Profile-etisalat";
+		};
+		B686B72F2DAAD3F30045E853 /* Release-etisalat */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16DD6B2B81868282968922BF /* Pods-RunnerTests.release-etisalat.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = RunnerTests;
+			};
+			name = "Release-etisalat";
 		};
 		C1EA931428D56D5F28685322 /* Release-etisalat */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F53DFE7956A00B8787E8C7C4 /* etisalatRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-etisalat";
@@ -1685,6 +1825,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 162A6C59B6144110AD43502A /* vodafoneRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-vodafone";
@@ -1693,6 +1835,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F79B8082D9CB93152795B5E /* orangeDebug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-orange";
@@ -1701,6 +1845,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B0A0DBE9569E9C1EEA57465E /* orangeRelease.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-orange";
@@ -1709,6 +1855,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8687560F710247E7DA71255E /* etisalatProfile.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
+				DEVELOPMENT_TEAM = NKGBMGP5XG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-etisalat";
@@ -1794,6 +1942,18 @@
 				331C8088294A63A400263BE5 /* Debug */,
 				331C8089294A63A400263BE5 /* Release */,
 				331C808A294A63A400263BE5 /* Profile */,
+				B686B7242DAAD3F30045E853 /* Debug-vodafone */,
+				B686B7252DAAD3F30045E853 /* Profile-vodafone */,
+				B686B7262DAAD3F30045E853 /* Release-vodafone */,
+				B686B7272DAAD3F30045E853 /* Debug-orange */,
+				B686B7282DAAD3F30045E853 /* Profile-orange */,
+				B686B7292DAAD3F30045E853 /* Release-orange */,
+				B686B72A2DAAD3F30045E853 /* Debug-we */,
+				B686B72B2DAAD3F30045E853 /* Profile-we */,
+				B686B72C2DAAD3F30045E853 /* Release-we */,
+				B686B72D2DAAD3F30045E853 /* Debug-etisalat */,
+				B686B72E2DAAD3F30045E853 /* Profile-etisalat */,
+				B686B72F2DAAD3F30045E853 /* Release-etisalat */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
